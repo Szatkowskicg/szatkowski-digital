@@ -1,0 +1,28 @@
+{
+  "common": {
+    "navigation": {
+      "about": "About",
+      "portfolio": "Project",
+      "contact": "Contact"
+    },
+    "seo": {
+      "home": {
+        "title": "BlitzForm - mobile 3D printing factory",
+        "description": "BlitzForm provides mobile 3D printing, fast part processing, and a digital parts warehouse delivered directly to your location."
+      }
+    }
+  },
+
+  "about": {
+    "hero": {
+      "header": "Paweł Szatkowski",
+      "title": "Full-Stack Developer",
+      "intro": "Driven to create refined, inclusive digital experiences that are both visually precise and user-centered.",
+      "more": [
+        "I have gained valuable experience working on freelance projects, where each assignment allows me to blend creativity with technology to deliver intuitive and user-friendly solutions.",
+        "Currently, I also work as a data analyst, which lets me combine analytical thinking with my development skills. This background enables me to create projects that are not only visually appealing but also functional and user-centered."
+      ],
+      "button": "Skontaktuj się z nami"
+    }
+  }
+}

@@ -2,25 +2,124 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0A0A0A;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* 🎨 Colors */
+  --color-primary-pink: #C94FA3;
+  --color-primary-pink--soft: #E0A8D1;
+  --color-primary-aqua: #04CFA7;
+  --color-primary-aqua--soft: #9DE9D9;
+  --color-primary-red: #FD0300;
+  --color-tech-pink: #BA5293;
+
+  --color-n-1: #EFEFEF;
+  --color-n-2: #1A1A1A;
+  --color-n-3: #2B2B2B;
+  --color-n-4: #B3B3B3;
+  --color-n-5: #3f3a52;
+  --color-n-6: #252134;
+  --color-n-7: #161b22;
+  --color-n-8: #0A0A0A;
+
+  /* 🖋️ Fonts */
+  --font-michroma: var(--font-michroma);
+  --font-inter: var(--font-inter);
+
+  /* 🔠 Letter spacing */
+  --letter-spacing-tagline: 0.15em;
+
+  /* 🧱 Border */
+  --border-width-default: 0.0625rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-n-8 text-n-1 text-base overscroll-none;
+    font-family: Inter, Michroma, sans-serif;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container {
+    @apply max-w-310 xl:max-w-350 mx-auto px-4 sm:px-6 md:px-10;
+  }
+
+  .container-lg {
+    @apply max-w-350 xl:max-w-390 mx-auto px-4 sm:px-6 md:px-10;
+  }
+
+  .container-xl {
+    @apply max-w-350 xl:max-w-390 mx-auto px-4 sm:px-6 md:px-5;
+  }
+
+  .h1 {
+    @apply text-[2.25rem] md:text-[3rem] lg:text-[4rem] leading-tight tracking-tight text-n-1;
+    font-family: var(--font-michroma);
+  }
+
+  .h2 {
+    @apply text-[1.5rem] md:text-[1.75rem] lg:text-[2.25rem] xl:text-[3rem] leading-snug text-n-1;
+    font-family: var(--font-michroma);
+  }
+
+  .h3 {
+    @apply text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] xl:text-[2rem] leading-snug text-n-1;
+    font-family: var(--font-michroma);
+  }
+
+  .h4 {
+    @apply text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] leading-snug text-n-1;
+    font-family: var(--font-michroma);
+  }
+
+  .h5 {
+    @apply text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] leading-snug text-n-1;
+    font-family: var(--font-michroma);
+  }
+
+  .h6 {
+    @apply text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] leading-snug tracking-wide text-n-1;
+    font-family: var(--font-michroma);
+  }
+
+  .body-lg {
+    @apply text-[1rem] md:text-[1.125rem] lg:text-[1.25rem] leading-relaxed text-n-1;
+    font-family: var(--font-inter);
+  }
+
+  .body-sm {
+    @apply font-medium text-[0.875rem] md:text-[1rem] lg:text-[1.125rem] leading-relaxed text-n-4;
+    font-family: var(--font-inter);
+  }
+
+  .menu-text {
+    @apply font-medium text-[0.875rem] md:text-[1rem] tracking-wide text-n-1;
+    font-family: var(--font-inter);
+  }
+}
+
+@layer utilities {
+  .tap-highlight-color {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 }
