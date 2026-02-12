@@ -1,13 +1,16 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Button from "../ui/Button";
+import Link from "next/link";
 
 const TextSection = ({ title, description }) => {
   return (
     <div className="flex flex-col lg:flex-2 items-end justify-center">
       <h1 className="h1 font-bold mb-8">{title}</h1>
       <p className="pl-12 text-lg pb-8">{description}</p>
-      <Button className="text-xl">Check more</Button>
+      <Link href="/portfolio/smokins-app" className="self-start">
+        <Button className="text-xl">Check more</Button>
+      </Link>
     </div>
   );
 };

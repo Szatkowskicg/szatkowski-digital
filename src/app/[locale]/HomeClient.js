@@ -5,9 +5,7 @@ import Header from "@/components/ui/Header";
 
 export default function HomeClient() {
   return (
-    <main className="relative">
-      <Header />
-
+    <main className="">
       <Hero />
     </main>
   );
