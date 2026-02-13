@@ -61,15 +61,15 @@
 
 @layer components {
   .container {
-    @apply max-w-310 xl:max-w-350 mx-auto px-4 sm:px-6 md:px-10;
+    @apply relative max-w-310 xl:max-w-350 mx-auto px-4 sm:px-6 md:px-10;
   }
 
   .container-lg {
-    @apply max-w-350 xl:max-w-390 mx-auto px-4 sm:px-6 md:px-10;
+    @apply relative max-w-350 xl:max-w-390 mx-auto px-4 sm:px-6 md:px-10;
   }
 
   .container-xl {
-    @apply max-w-350 xl:max-w-390 mx-auto px-4 sm:px-6 md:px-5;
+    @apply relative max-w-350 xl:max-w-390 mx-auto px-4 sm:px-6 md:px-5;
   }
 
   .h1 {

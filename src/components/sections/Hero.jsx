@@ -5,6 +5,8 @@ import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -60,7 +62,8 @@ export default function Hero() {
         <InterfacesBlock />
       </div>
 
-      <div className="absolute bottom-12 left-16">{/* <SocialsHero /> */}</div>
+      <SocialsHero />
+
       <HomeBg />
     </section>
   );
@@ -144,5 +147,21 @@ const InterfacesBlock = () => {
         </p>
       </div>
     </motion.div>
+  );
+};
+
+const SocialsHero = () => {
+  return (
+    <div className="absolute bottom-12 left-24 flex flex-col  items-center gap-6 text-n-1">
+      <Linkedin className="w-6 h-6" />
+
+      <Github className="w-6 h-6" />
+
+      <Instagram className="w-6 h-6" />
+
+      <div className="h-6 w-px bg-n-1 rounded-px" />
+
+      <LanguageSwitcher />
+    </div>
   );
 };
